@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#345D7E"
+        android:orientation="vertical"
+        tools:context="com.example.lucasmarsol.spudy.RegistroActivity">
+
+        <TextView
+            android:id="@+id/text_registre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:layout_marginTop="35sp"
+            android:gravity="center"
+            android:text="@string/sp_titRegistre"
+            android:textColor="#F4717F"
+            android:textSize="40sp" />
+
+
+        <EditText
+            android:id="@+id/edt_nomeReg"
+            android:layout_width="300sp"
+            android:layout_height="45sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:background="@drawable/border_gray"
+            android:hint="@string/sp_hintNome"
+            android:paddingLeft="30dp"/>
+
+        <EditText
+            android:id="@+id/edt_emailReg"
+            android:layout_width="300sp"
+            android:layout_height="45sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:background="@drawable/border_gray"
+            android:hint="@string/sp_hintEmail"
+            android:paddingLeft="30dp" />
+
+        <EditText
+            android:id="@+id/edt_dataReg"
+            android:layout_width="300sp"
+            android:layout_height="45sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:paddingLeft="30dp"
+            android:background="@drawable/border_gray"
+            android:hint="@string/sp_hintNascimento" />
+
+        <EditText
+            android:id="@+id/edt_instituicaoReg"
+            android:layout_width="300sp"
+            android:layout_height="45sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:paddingLeft="30dp"
+            android:background="@drawable/border_gray"
+            android:hint="@string/sp_hintInstituicao" />
+
+        <Spinner
+            android:id="@+id/spn_tipodeconta"
+            android:layout_width="300dp"
+            android:layout_height="45sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/edt_senhaReg"
+            android:layout_gravity="center"
+            android:background="@drawable/border_gray" />
+
+        <EditText
+            android:id="@+id/edt_senhaReg"
+            android:layout_width="300sp"
+            android:layout_height="45sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_gray"
+            android:hint="@string/sp_hintSenha"
+            android:inputType="textPassword"
+            android:paddingLeft="30dp" />
+
+        <EditText
+            android:id="@+id/ConfirmasenhaReg"
+            android:layout_width="300sp"
+            android:layout_height="45sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:paddingLeft="30dp"
+            android:background="@drawable/border_gray"
+            android:hint="@string/sp_hintConfirmSenha"
+            android:inputType="textPassword" />
+
+        <Spinner
+            android:id="@+id/spn_perguntaSeguranca"
+            android:layout_width="300sp"
+            android:layout_height="45sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/border_gray" />
+
+        <EditText
+            android:id="@+id/edt_resposta"
+            android:layout_width="300sp"
+            android:layout_height="45sp"
+            android:layout_gravity="right"
+            android:layout_marginBottom="20sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_gray"
+            android:hint="@string/sp_hintResposta"
+            android:paddingLeft="10dp"/>
+
+        <Button
+            android:id="@+id/btn_confirmRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="50sp"
+            android:background="@drawable/border_pink"
+            android:onClick="confirmRegistro"
+            android:text="@string/sp_confirmReg"
+            android:textColor="#E6E6E6" />
+
+
+    </LinearLayout>
+</ScrollView>

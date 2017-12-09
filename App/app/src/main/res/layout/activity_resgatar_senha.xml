@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#325C7F"
+    tools:context="com.example.lucasmarsol.spudy.ResgatarSenhaActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70sp"
+        android:text="RECUPERAÇÃO DE SENHA"
+        android:textColor="#F4717F"
+        android:layout_marginBottom="20sp"
+        android:gravity="center"
+        android:textSize="40sp"/>
+    <EditText
+        android:background="@drawable/border_gray"
+        android:layout_gravity="center"
+        android:layout_width="300sp"
+        android:layout_height="45sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:hint="     Email"/>
+    <Button
+        android:background="@drawable/border_pink"
+        android:layout_gravity="center"
+        android:layout_width="300sp"
+        android:layout_height="45sp"
+        android:layout_marginTop="200sp"
+        android:layout_marginBottom="50sp"
+        android:text="PRÓXIMO"
+        android:textColor="#E6E6E6"/>
+
+</LinearLayout>

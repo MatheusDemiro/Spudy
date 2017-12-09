@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:background="#345D7E"
+   tools:context="com.example.lucasmarsol.spudy.LoginActivity">
+
+   <EditText
+       android:id="@+id/edt_email"
+       android:layout_width="match_parent"
+       android:layout_height="45dp"
+       android:layout_above="@+id/edt_senha"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:layout_marginBottom="10dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:background="@drawable/border_white"
+       android:ems="10"
+       android:hint="@string/sp_hintEmail"
+       android:inputType="textEmailAddress"
+       android:paddingLeft="40dp"
+       android:textColorHint="@color/textColorHint" />
+
+   <EditText
+       android:id="@+id/edt_senha"
+       android:layout_width="match_parent"
+       android:layout_height="45dp"
+       android:layout_alignParentEnd="true"
+       android:layout_alignParentRight="true"
+       android:layout_centerVertical="true"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:background="@drawable/border_white"
+       android:ems="10"
+       android:hint="@string/sp_hintSenha"
+       android:inputType="textPassword"
+       android:paddingLeft="40dp"
+       android:textColorHint="@color/textColorHint" />
+
+   <Button
+       android:id="@+id/btn_entrar"
+       android:layout_width="250dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/text_esqueciSenha"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="15dp"
+       android:background="@drawable/border_pink"
+       android:text="@string/btn_entrar"
+       android:textColor="#FFFFFF"
+       android:textSize="16sp" />
+
+   <ImageView
+       android:id="@+id/imv_vecMail"
+       android:layout_width="30dp"
+       android:layout_height="30dp"
+       android:layout_alignLeft="@+id/edt_email"
+       android:layout_alignStart="@+id/edt_email"
+       android:layout_alignTop="@+id/edt_email"
+       android:layout_marginLeft="5dp"
+       android:layout_marginTop="10dp"
+       app:srcCompat="@drawable/vector_email"/>
+
+   <ImageView
+       android:id="@+id/imv_vecSenha"
+       android:layout_width="30dp"
+       android:layout_height="30dp"
+       android:layout_alignLeft="@+id/imv_vecMail"
+       android:layout_alignStart="@+id/imv_vecMail"
+       android:layout_centerVertical="true"
+       app:srcCompat="@drawable/vector_senha"/>
+
+   <TextView
+       android:id="@+id/text_nao_Registro"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/btn_entrar"
+       android:layout_marginLeft="24dp"
+       android:layout_marginStart="24dp"
+       android:layout_marginTop="36dp"
+       android:layout_toEndOf="@+id/imv_vecSenha"
+       android:layout_toRightOf="@+id/imv_vecSenha"
+       android:text="@string/sp_nRegistro"
+       android:textColor="#FFFFFF" />
+
+   <TextView
+       android:id="@+id/text_registro"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBaseline="@+id/text_nao_Registro"
+       android:layout_alignBottom="@+id/text_nao_Registro"
+       android:layout_marginLeft="5dp"
+       android:layout_toEndOf="@+id/text_nao_Registro"
+       android:layout_toRightOf="@+id/text_nao_Registro"
+       android:text="@string/sp_registre"
+       android:onClick=""
+       android:textColor="@color/textColorAccent" />
+
+   <TextView
+       android:id="@+id/text_esqueciSenha"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/edt_senha"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="21dp"
+       android:text="@string/sp_esqueceuSenha"
+       android:textColor="@color/textColorAccent" />
+
+   <ImageButton
+       android:id="@+id/imb_titulo"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="22dp"
+       android:background="#345D7E"
+       app:srcCompat="@drawable/vector_logo_new" />
+
+
+</RelativeLayout>

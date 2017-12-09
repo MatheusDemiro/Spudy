@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">spudy</string>
+    <string name="sp_hintEmail">Email</string>
+    <string name="sp_hintSenha">Senha</string>
+    <string name="sp_esqueceuSenha"><u>Não sei minha senha</u></string>
+    <string name="sp_registre"><u>Registre-se!</u></string>
+    <string name="sp_titRegistre">REGISTRE-SE</string>
+    <string name="sp_nRegistro">Não é registrado?</string>
+    <string name="btn_entrar">ENTRAR</string>
+    <string name="sp_invalido">Campo(s) Usuário ou Senha em branco!</string>
+    <string name="sp_hintResposta">Resposta:</string>
+    <string name="sp_confirmReg">CONFIRMAR REGISTRO</string>
+    <string name="sp_perguntaVazia">Escolha um tipo de conta</string>
+    <string name="sp_hintNome">Nome</string>
+    <string name="sp_hintNascimento">Data de Nascimento</string>
+    <string name="sp_hintInstituicao">Instituição</string>
+    <string name="sp_hintConfirmSenha">Confirme sua senha</string>
+</resources>
