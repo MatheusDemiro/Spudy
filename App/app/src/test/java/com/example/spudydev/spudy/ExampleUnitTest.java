@@ -1,4 +1,4 @@
-package com.example.lucasmarsol.spudy;
+package com.example.spudydev.spudy;
 
 import org.junit.Test;
 

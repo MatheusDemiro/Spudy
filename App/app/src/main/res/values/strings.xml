@@ -1,18 +1,44 @@
 <resources>
     <string name="app_name">spudy</string>
-    <string name="sp_hintEmail">Email</string>
-    <string name="sp_hintSenha">Senha</string>
+
     <string name="sp_esqueceuSenha"><u>Não sei minha senha</u></string>
     <string name="sp_registre"><u>Registre-se!</u></string>
     <string name="sp_titRegistre">REGISTRE-SE</string>
+    <string name="sp_confirmReg">CONFIRMAR REGISTRO</string>
+    <string name="sp_perguntaVazia">Escolha um tipo de conta</string>
     <string name="sp_nRegistro">Não é registrado?</string>
     <string name="btn_entrar">ENTRAR</string>
     <string name="sp_invalido">Campo(s) Usuário ou Senha em branco!</string>
+    <string name="sp_hintEmail">Email</string>
+    <string name="sp_hintSenha">Senha</string>
     <string name="sp_hintResposta">Resposta:</string>
-    <string name="sp_confirmReg">CONFIRMAR REGISTRO</string>
-    <string name="sp_perguntaVazia">Escolha um tipo de conta</string>
     <string name="sp_hintNome">Nome</string>
     <string name="sp_hintNascimento">Data de Nascimento</string>
     <string name="sp_hintInstituicao">Instituição</string>
     <string name="sp_hintConfirmSenha">Confirme sua senha</string>
+    <string name="sp_titRecuperacaoDeSenha"><b>Recuperação de Senha</b></string>
+    <string name="sp_fraDigitarEmail">Digite o seu email.</string>
+    
+    <string name="sp_contaCriada">CONTA CRIADA COM SUCESSO!</string>
+    <string name="sp_clickOk">OK!</string>
+    <string name="sp_longinBemSucedido">Login Efetuado com Sucesso!</string>
+    <string name="sp_usuarioCadastrado">Usuário cadastrado com sucesso!</string>
+    
+    <string name="sp_campoVazio">Preencha o(s) campo(s) vazio(s)!</string>
+    <string name="sp_camposEmailSenha">Preencha os campos de email e senha!</string>
+    <string name="sp_senhasIguais">Digite senhas iguais</string>
+    <string name="sp_conexaoFalha">Sem conexão com a Internet</string>
+    <string name="sp_excecaoSenha">Digite uma senha mais forte, contendo no mínimo 8 caracteres composta por letras e números</string>7
+    <string name="sp_excecaoEmail">Email digitado é inválido, digite um novo email</string>
+    <string name="sp_excecaoEmailCadastrado">Esse email já esta cadastrado no sistema</string>
+    <string name="sp_excecaoCadastro">Erro ao efetuar cadastro</string>
+    <string name="sp_usuarioSenhaErrados">Usuário ou senha inválido!</string>
+
+    <string name="sp_emConstrucao">Em construção...</string>
+    
+    <string name="title_activity_main_aluno">spudy</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

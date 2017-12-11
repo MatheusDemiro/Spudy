@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulFundo"
+    tools:context="com.example.spudydev.spudy.Activity.ConfirmRegistroActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="86dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/sp_contaCriada"
+        android:textColor="@color/textColorAccent"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/btn_OkConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="145dp"
+        android:background="@drawable/border_pink"
+        android:text="@string/sp_clickOk"
+        android:textSize="15dp"
+        android:textColor="@color/cinzaClaro" />
+</RelativeLayout>

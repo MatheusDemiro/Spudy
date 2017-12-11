@@ -1,13 +1,16 @@
-package com.example.lucasmarsol.spudy;
+package com.example.spudydev.spudy.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ResgatarSenhaActivity extends AppCompatActivity {
+import com.example.spudydev.spudy.R;
+
+public class TelaTesteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resgatar_senha);
+        setContentView(R.layout.activity_tela_teste);
+
     }
 }
