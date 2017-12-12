@@ -143,7 +143,6 @@ public class LoginActivity extends AppCompatActivity {
            //Iniciando tela do Aluno
            Intent intentAbrirTelaAluno = new Intent(LoginActivity.this, MainAlunoActivity.class);
            startActivity(intentAbrirTelaAluno);
-           finish();
     }
     public void abrirTelaProfessor() {
         //Iniciando tela do Professor
@@ -158,6 +157,5 @@ public class LoginActivity extends AppCompatActivity {
         Intent intentAbrirTelaResgatarSenha = new Intent (LoginActivity.this, ResgatarSenhaActivity.class);
         startActivity(intentAbrirTelaResgatarSenha);
     }
-
 
 }
