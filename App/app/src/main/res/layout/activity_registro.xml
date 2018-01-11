@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/azulFundo"
+        android:orientation="vertical"
+        tools:context="com.example.spudydev.spudy.Activity.RegistroActivity">
+
+        <ImageButton
+            android:layout_marginTop="35dp"
+            android:id="@+id/imb_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_registre_se" />
+        <EditText
+            android:id="@+id/edt_nomeReg"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/border_branco"
+            android:hint="@string/sp_hint_nome"
+            android:paddingLeft="15dp"
+            android:inputType="textPersonName"
+            android:textColor="@color/preto"
+            android:maxLength="100"/>
+
+        <EditText
+            android:id="@+id/edt_emailReg"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_branco"
+            android:hint="@string/sp_hint_email"
+            android:paddingLeft="15dp"
+            android:inputType="textWebEmailAddress"
+            android:textColor="@color/preto" />
+
+        <EditText
+            android:id="@+id/edt_dataReg"
+            android:drawableLeft="@drawable/ic_calendario"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="15dp"
+            android:inputType="date"
+            android:background="@drawable/border_branco"
+            android:hint="@string/sp_hint_nascimento"
+            android:textColor="@color/preto" />
+
+        <EditText
+            android:id="@+id/edt_instituicaoReg"
+            android:drawableLeft="@drawable/ic_institucao"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:paddingLeft="15dp"
+            android:background="@drawable/border_branco"
+            android:hint="@string/sp_hint_instituicao"
+            android:inputType="text"
+            android:textColor="@color/preto"
+            android:maxLength="100"/>
+
+        <Spinner
+            android:id="@+id/spn_tipoDeConta"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/edt_senhaReg"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_branco"
+            android:entries="@array/spinner_tipo_conta"
+            android:paddingLeft="30dp"
+            android:textColor="@color/cinzaLetras" />
+
+        <EditText
+            android:id="@+id/edt_senhaReg"
+            android:drawableLeft="@drawable/ic_cadeado"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_branco"
+            android:hint="@string/sp_hint_senha"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textColor="@color/preto"/>
+
+        <EditText
+            android:id="@+id/edt_confirmaSenha"
+            android:drawableLeft="@drawable/ic_cadeado"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="15dp"
+            android:background="@drawable/border_branco"
+            android:hint="@string/sp_hint_confirm_senha"
+            android:inputType="textPassword"
+            android:textColor="@color/preto" />
+
+
+        <Button
+            android:id="@+id/btn_confirmRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/border_pink"
+            android:text="@string/sp_confirm_reg"
+            android:textColor="@color/branco" />
+
+
+    </LinearLayout>
+</ScrollView>
