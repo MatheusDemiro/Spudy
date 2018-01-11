@@ -1,5 +1,4 @@
 package com.example.spudydev.spudy.Activity;
-import android.R.*;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -8,17 +7,18 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.spudydev.spudy.DAO.ConfiguracaoFirebase;
-import com.example.spudydev.spudy.Entidades.Usuarios;
-import com.example.spudydev.spudy.Helper.Base64Custom;
+import com.example.spudydev.spudy.DAO.AcessoFirebase;
+import com.example.spudydev.spudy.Entidades.Pessoa;
+import com.example.spudydev.spudy.Entidades.Usuario;
 import com.example.spudydev.spudy.Helper.Preferencias;
 import com.example.spudydev.spudy.R;
+import com.example.spudydev.spudy.Verificador.VerificaConexao;
+import com.example.spudydev.spudy.Verificador.VerificaRegistro;
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,26 +28,29 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
-import com.google.firebase.auth.FirebaseUser;
 
 public class RegistroActivity extends AppCompatActivity {
-
-    private String[] tipoConta = new String[]{"Selecione o tipo de conta", "Aluno", "Professor"};
-    private String[] perguntaSegurança = new String[]{"Selecione a pergunta secreta", "Nome do seu primeiro animal de estimação", "Nome do melhor amigo de infância", "Filme predileto"};
 
     private EditText nomeReg;
     private EditText emailReg;
     private EditText dataNascimentoReg;
     private EditText instituicaoReg;
     private Spinner tipodecontaReg;
-    private Spinner perguntaSegur;
+    //private Spinner perguntaSegur;
     private Button btnConfirmaReg;
-    private EditText respostaSeguranca;
+    //private EditText respostaSeguranca;
     private EditText senhaReg;
     private EditText confirmaSenhaReg;
-    private Usuarios usuarios;
+    //private Usuario e Pessoa
+    private Usuario usuario;
+    private Pessoa pessoa;
     //Variaveis para enviar dados autenticados do registro
     private FirebaseAuth autenticacao;
+    //Verifica conexao
+    private VerificaConexao verificaConexao;
+    //Verifica
+    private VerificaRegistro verificaRegistro;
+    private String msgVerifica;
 
 
     @Override
@@ -60,28 +63,19 @@ public class RegistroActivity extends AppCompatActivity {
         emailReg = (EditText) findViewById(R.id.edt_emailReg);
         dataNascimentoReg = (EditText) findViewById(R.id.edt_dataReg);
         instituicaoReg = (EditText) findViewById(R.id.edt_instituicaoReg);
-        tipodecontaReg = (Spinner) findViewById(R.id.spn_tipodeconta);
-        perguntaSegur = (Spinner) findViewById(R.id.spn_perguntaSeguranca);
-        respostaSeguranca = (EditText) findViewById(R.id.edt_resposta);
+        tipodecontaReg = (Spinner) findViewById(R.id.spn_tipoDeConta);
         btnConfirmaReg = (Button) findViewById(R.id.btn_confirmRegistro);
         senhaReg = (EditText) findViewById(R.id.edt_senhaReg);
         confirmaSenhaReg = (EditText) findViewById(R.id.edt_confirmaSenha);
+        //Conexao
+        verificaConexao = new VerificaConexao(this);
+
 
         //criando máscara para data de nascimento
         dataNascimentoReg = (EditText) findViewById(R.id.edt_dataReg);
         SimpleMaskFormatter smf = new SimpleMaskFormatter("NN/NN/NNNN");
         MaskTextWatcher mtw = new MaskTextWatcher(dataNascimentoReg, smf);
         dataNascimentoReg.addTextChangedListener(mtw);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, layout.simple_spinner_dropdown_item, tipoConta);
-        adapter.setDropDownViewResource(layout.simple_spinner_dropdown_item);
-        final Spinner sp = (Spinner) findViewById(R.id.spn_tipodeconta);
-        sp.setAdapter(adapter);
-
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, layout.simple_spinner_dropdown_item, perguntaSegurança);
-        adapter2.setDropDownViewResource(layout.simple_spinner_dropdown_item);
-        Spinner sp2 = (Spinner) findViewById(R.id.spn_perguntaSeguranca);
-        sp2.setAdapter(adapter2);
 
         btnConfirmaReg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,92 +88,86 @@ public class RegistroActivity extends AppCompatActivity {
                 String email = emailReg.getText().toString();
                 String data = dataNascimentoReg.getText().toString();
                 String instituicao = instituicaoReg.getText().toString();
-                String respSeguranca = respostaSeguranca.getText().toString();
                 String confirmaSenhaR = confirmaSenhaReg.getText().toString();
                 String senhaR = senhaReg.getText().toString();
-                String perguntaS = perguntaSegur.getSelectedItem().toString();
                 String tipoConta = tipodecontaReg.getSelectedItem().toString();
 
-                if (isConnected) {
-                    if (nome.isEmpty() || email.isEmpty() || data.isEmpty() || instituicao.isEmpty()
-                            || respSeguranca.isEmpty() || confirmaSenhaR.isEmpty() || senhaR.isEmpty()) {
-                        Toast.makeText(RegistroActivity.this, getString(R.string.sp_campoVazio), Toast.LENGTH_SHORT).show();
-                    } else {
-                        if (senhaReg.getText().toString().equals(confirmaSenhaReg.getText().toString())) {
-                            usuarios = new Usuarios();
-                            usuarios.setNome(nome);
-                            usuarios.setEmail(email);
-                            usuarios.setDataNasc(data);
-                            usuarios.setInstituicao(instituicao);
-                            usuarios.setSenha(senhaR);
-                            usuarios.setPerguntaSeguranca(perguntaS);
-                            usuarios.setResposta(respSeguranca);
-                            usuarios.setTipoConta(tipoConta);
-                            cadastrarUsuario();
-                        } else {
-                            Toast.makeText(RegistroActivity.this, getString(R.string.sp_senhasIguais), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }
+                if(verificaConexao.estaConectado()){
+                    if (senhaR.equals(confirmaSenhaR)) {
+                        usuario = new Usuario();
+                        pessoa = new Pessoa();
 
-                else {
-                    Toast.makeText(RegistroActivity.this, getString(R.string.sp_conexaoFalha), Toast.LENGTH_SHORT).show();
+                        pessoa.setNome(nome);
+                        pessoa.setData_nascimento(data);
+                        usuario.setEmail(email);
+                        usuario.setInstituicao(instituicao);
+                        usuario.setTipoConta(tipoConta);
+                        usuario.setSenha(senhaR);
+                        verificaRegistro = new VerificaRegistro(usuario, pessoa);
+                        msgVerifica = verificaRegistro.Verificar();
+                        if (msgVerifica.equals("sucesso")) {
+                            cadastrarUsuario();
+                        }else{
+                            Toast.makeText(RegistroActivity.this, msgVerifica, Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(RegistroActivity.this, getString(R.string.sp_senhas_iguais), Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(RegistroActivity.this, getString(R.string.sp_conexao_falha), Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
+
     private void cadastrarUsuario(){
-        autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
+        autenticacao = AcessoFirebase.getFirebaseAutenticacao();
         autenticacao.createUserWithEmailAndPassword(
-                usuarios.getEmail(),
-                usuarios.getSenha()
+                usuario.getEmail(),
+                usuario.getSenha()//Poderíamos substituir pelo edt_senha
         ).addOnCompleteListener(RegistroActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(RegistroActivity.this, getString(R.string.sp_usuarioCadastrado), Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegistroActivity.this, getString(R.string.sp_usuario_cadastrado), Toast.LENGTH_LONG).show();
+                    usuario.setId(autenticacao.getCurrentUser().getUid());
+                    pessoa.setUsuario(usuario);
 
-                    String identificadorUsuario = Base64Custom.codificarBase64(usuarios.getEmail());
-                    FirebaseUser usuarioFirebase = task.getResult().getUser();
-                    usuarios.setId(identificadorUsuario);
-                    usuarios.salvar();
+                    //isso n serve pra nd
+                    //Preferencias preferencias = new Preferencias(RegistroActivity.this);
+                    //preferencias.salvarUsuarioPreferencias(usuario.getEmail(), pessoa.getNome());
 
-                    Preferencias preferencias = new Preferencias(RegistroActivity.this);
-                    preferencias.salvarUsuarioPreferencias(identificadorUsuario, usuarios.getNome());
+                    //salvando usuário
+                    AcessoFirebase.getFirebase().child("usuario").child(autenticacao.getCurrentUser().getUid()).setValue(usuario.toMapUsuario());
+                    AcessoFirebase.getFirebase().child("pessoa").child(autenticacao.getCurrentUser().getUid()).setValue(pessoa.toMapPessoa());
 
-                    abrirLoginUsuario();
+
+                    abrirTelaLoginUsuario();
                 }else{
                     String erroExcecao = "";
 
                     try{
-
                         throw task.getException();
                     }catch (FirebaseAuthWeakPasswordException e){
-                        erroExcecao = getString(R.string.sp_excecaoSenha);
+                        senhaReg.setError(getString(R.string.sp_excecao_senha));
+                        confirmaSenhaReg.setError(getString(R.string.sp_excecao_senha));
                     }catch (FirebaseAuthInvalidCredentialsException e){
-                        erroExcecao = getString(R.string.sp_excecaoEmail);
+                        emailReg.setError(getString(R.string.sp_excecao_email));
                     }catch (FirebaseAuthUserCollisionException e){
-                        erroExcecao = getString(R.string.sp_excecaoEmailCadastrado);
+                        emailReg.setError(getString(R.string.sp_excecao_email_cadastrado));
                     }catch (Exception e){
-                        erroExcecao = getString(R.string.sp_excecaoCadastro);
+                        erroExcecao = getString(R.string.sp_excecao_cadastro);
                         e.printStackTrace();
                     }
                     Toast.makeText(RegistroActivity.this, "Erro: "+ erroExcecao, Toast.LENGTH_LONG).show();
-
-
                 }
             }
         });
 
     }
-    public void abrirLoginUsuario(){
+    public void abrirTelaLoginUsuario(){
         Intent intentAbrirTelaRegistroConfirm = new Intent(RegistroActivity.this, ConfirmRegistroActivity.class);
         startActivity(intentAbrirTelaRegistroConfirm);
         finish();
     }
 }
-
-
-
-
-

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="@layout/app_bar_meu_perfil_professor"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/azulFundo"
+        tools:context="com.example.spudydev.spudy.Activity.MeuPerfilProfessorActivity">
+
+        <ImageView
+            android:id="@+id/imagem_perfil_professor"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="35dp"
+            app:srcCompat="@drawable/ic_semfoto"
+            tools:ignore="VectorDrawableCompat" />
+
+        <EditText
+            android:id="@+id/edt_conta_professor_nomeAlterar"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:gravity="center|start"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/preto"
+            android:maxLength="100"
+            android:background="@drawable/border_branco"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/edt_conta_professor_emailAlterar"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center|start"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/preto"
+            android:background="@drawable/border_branco"/>
+
+        <TextView
+            android:id="@+id/edt_conta_professor_dataNascimentoAlterar"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_calendario"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center|start"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/preto"
+            android:background="@drawable/border_branco"/>
+
+        <TextView
+            android:id="@+id/edt_conta_professor_instituicaoAlterar"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_institucao"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center|start"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/preto"
+            android:maxLength="100"
+            android:background="@drawable/border_branco" />
+
+        <Button
+            android:id="@+id/btn_informacao_perfil_professor"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@null"
+            android:drawableBottom="@drawable/ic_informacao" />
+
+</LinearLayout>

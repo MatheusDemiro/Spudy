@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulFundo"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/azulFundo">
+
+
+        <LinearLayout
+            android:paddingVertical="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/aluno_adicionar_turma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sp_title_adionar_turma"
+                android:textSize="30dp"
+                android:textColor="@color/rosaSpudy"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/aluno_digite_codigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/sp_fra_digitar_codigo_turma"
+                android:textColor="@color/cinzaClaro"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/digitando_codigo_da_turma"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/border_branco"
+                android:text="@string/sp_hint_codigo_da_turma"
+                android:drawableLeft="@drawable/ic_adicionar"
+                android:drawablePadding="10dp"
+                android:paddingLeft="15dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border_pink"
+                android:text="@string/sp_adicionar_turma"
+                android:textColor="@color/cinzaClaro" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

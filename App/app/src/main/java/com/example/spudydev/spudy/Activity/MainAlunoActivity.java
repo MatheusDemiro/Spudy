@@ -1,32 +1,32 @@
 package com.example.spudydev.spudy.Activity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.spudydev.spudy.Helper.Base64Custom;
+import com.example.spudydev.spudy.DAO.DadosMenuDAO;
 import com.example.spudydev.spudy.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 
 public class MainAlunoActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private DadosMenuDAO dadosMenuDAO = new DadosMenuDAO();
+    private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,48 +37,34 @@ public class MainAlunoActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.sp_navigation_drawer_open, R.string.sp_navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        //Chamando a classe para setar nome e email do cabeca_menu_aluno
-        resgatarUsuario();
-    }
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        //Chamando a classe para setar nome e email do nav_header_menu_aluno
+        dadosMenuDAO.resgatarUsuario(navigationView, user);
 
-    private void resgatarUsuario() {
-
-        //Consultando banco de dados para resgatar o nome e email
-        DatabaseReference databaseReferenceUser = FirebaseDatabase.getInstance().getReference().child("usuario");
-        String identificador = Base64Custom.codificarBase64(user.getEmail());
-
-        databaseReferenceUser.child(identificador).child("nome").addListenerForSingleValueEvent(new ValueEventListener() {
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String nome = dataSnapshot.getValue(String.class);
-                NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-                setUserName(navigationView, nome);
-                setUserEmail( navigationView , user.getEmail());
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.nav_meu_perfil:
+                        abrirTelaMeuPerfilAlunoActivity();
+                        return true;
+                    case R.id.nav_turmas:
+                        //Activity de turmas
+                        Toast.makeText(MainAlunoActivity.this, "Em construção", Toast.LENGTH_SHORT).show();
+                        return true;
+                    case R.id.nav_sair:
+                        sair();
+                        //sair
+                        return true;
+                    default:
+                        return false;
+                }
             }
         });
-    }
-    //Método que seta o email para o TextView id: txt_nav_UserEmail
-    private void setUserEmail(NavigationView navView, String email){
-        View headerView = navView.getHeaderView(0);
-        TextView userEmail = headerView.findViewById(R.id.txt_nav_UserEmail);
-        userEmail.setText(email);
-        userEmail.setTextColor(getResources().getColor(R.color.azulClaro));
-    }
-    //Método que seta o nome para o TextView id: txt_nav_UserName
-    private void setUserName(NavigationView navView, String nome){
-        View headerView = navView.getHeaderView(0);
-        TextView userName = headerView.findViewById(R.id.txt_nav_UserName);
-        userName.setText(nome);
-        userName.setTextColor(getResources().getColor(R.color.azulClaro));
     }
 
     @Override
@@ -119,22 +105,48 @@ public class MainAlunoActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_turmas) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_meu_perfil) {
 
-        } else if (id == R.id.nav_slideshow) {
-
-        //} else if (id == R.id.nav_manage) {
-
-        //} else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.nav_sair) {
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    public void sair() {
+        //Cria o gerador do AlertDialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //define o titulo
+        builder.setTitle("Sair");
+        //define a mensagem
+        builder.setMessage("Tem certeza que desejas sair?");
+        //define um botão como positivo
+        builder.setPositiveButton("Sim", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface arg0, int arg1) {
+                FirebaseAuth.getInstance().signOut();
+                abrirTelaLoginActivity();
+            }
+        });
+        //define um botão como negativo.
+        builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                alerta.dismiss();
+            }
+        });
+        //cria o AlertDialog
+        alerta = builder.create();
+        //Exibe
+        alerta.show();
+    }
+    public void abrirTelaLoginActivity(){
+        Intent intentAbrirTelaLoginAcitivty = new Intent(MainAlunoActivity.this, LoginActivity.class);
+        startActivity(intentAbrirTelaLoginAcitivty);
+        finish();
+    }
+    public void abrirTelaMeuPerfilAlunoActivity(){
+        Intent intentAbrirTelaMeuPerfilAlunoAcitivty = new Intent(MainAlunoActivity.this, MeuPerfilAlunoActivity.class);
+        startActivity(intentAbrirTelaMeuPerfilAlunoAcitivty);
     }
 }

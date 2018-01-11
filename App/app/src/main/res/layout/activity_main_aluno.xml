@@ -18,8 +18,9 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:clickable="true"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/cabeca_menu_aluno"
+        app:headerLayout="@layout/nav_header_menu_aluno"
         app:menu="@menu/activity_main_aluno_drawer" />
 
 </android.support.v4.widget.DrawerLayout>

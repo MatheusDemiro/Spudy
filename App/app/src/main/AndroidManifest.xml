@@ -19,13 +19,54 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.RegistroActivity" />
-        <activity android:name=".Activity.ResgatarSenhaActivity" />
+        <activity android:name=".Activity.ResgatarSenhaEmailActivity" />
         <activity android:name=".Activity.ConfirmRegistroActivity" />
         <activity
             android:name=".Activity.MainAlunoActivity"
-            android:label="@string/title_activity_main_aluno"
+            android:label="@string/sp_title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity.TelaTesteActivity"></activity>
+        <activity
+            android:name=".Activity.MainProfessorActivity"
+            android:label="@string/sp_title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.MeuPerfilAlunoActivity"
+            android:label="@string/sp_title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.AlterarDadosCadastraisActivity"
+            android:label="@string/sp_title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.Alteracao.AlterarNomeActivity" />
+        <activity android:name=".Activity.Alteracao.AlterarDataNascimentoActivity" />
+        <activity android:name=".Activity.Alteracao.AlterarInstituicaoActivity" />
+        <activity android:name=".Activity.Alteracao.AlterarSenhaActivity" />
+        <activity android:name=".Activity.Alteracao.AlterarEmailActivity" />
+        <activity
+            android:name=".Activity.DisciplinaActivity"
+            android:label="@string/sp_title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.MainCriarDisciplinaActivity"
+            android:label="@string/sp_title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.AdicionarMaterialActivity"
+            android:label="@string/sp_title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.MainMateriaisActivity"
+            android:label="@string/sp_title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.MainMaterialActivity"
+            android:label="@string/sp_title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.MeuPerfilProfessorActivity"
+            android:label="@string/sp_title_activity_main"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

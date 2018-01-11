@@ -1,60 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:background="@color/azulFundo"
-    tools:context="com.example.spudydev.spudy.Activity.ResgatarSenhaActivity">
+    tools:context="com.example.spudydev.spudy.Activity.ResgatarSenhaEmailActivity" >
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="25dp"
-        android:background="@color/rosaSpudy"
-        android:gravity="center"
-        android:text="@string/sp_titRecuperacaoDeSenha"
-        android:textColor="@color/cinzaClaro"
-        android:textSize="25dp" />
+        <ImageButton
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="35dp"
+            android:id="@+id/imb_rec_de_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_recuperacao_de_senha"
+            tools:ignore="VectorDrawableCompat" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView"
-        android:layout_marginBottom="25dp"
-        android:gravity="center"
-        android:textSize="18dp"
-        android:textColor="@color/cinzaClaro"
-        android:text="@string/sp_fraDigitarEmail" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textColor="@color/cinzaClaro"
+            android:inputType="textEmailAddress"
+            android:text="@string/sp_hint_digitar_email" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_below="@+id/textView4"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/border_gray"
-        android:drawableLeft="@drawable/ic_email"
-        android:drawablePadding="10dp"
-        android:hint="@string/sp_hintEmail"
-        android:paddingLeft="15dp" />
+        <EditText
+            android:id="@+id/edt_email_resgatar_senha"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_branco"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:hint="@string/sp_hint_email"
+            android:inputType="textWebEmailAddress"
+            android:paddingLeft="15dp" />
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="35dp"
-        android:background="@drawable/border_pink"
-        android:text="PRÓXIMO"
-        android:textColor="@color/cinzaClaro"
-        android:id="@+id/button3" />
+        <Button
+            android:id="@+id/btn_resgatar_senha"
+            android:onClick="enviarEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/border_pink"
+            android:text="@string/sp_click_enviar"
+            android:textColor="@color/branco" />
 
-</RelativeLayout>
+</LinearLayout>
+

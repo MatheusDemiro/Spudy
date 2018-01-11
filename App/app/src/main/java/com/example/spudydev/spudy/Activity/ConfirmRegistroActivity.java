@@ -17,7 +17,7 @@ public class ConfirmRegistroActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_confirm_registro);
 
-        button_OK = (Button) findViewById(R.id.btn_OkConfirm);
+        button_OK = (Button) findViewById(R.id.btn_ok_confirmacao_registro);
         button_OK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
