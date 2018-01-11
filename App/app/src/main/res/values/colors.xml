@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="branco">#ffffff</color>
+    <color name="colorPrimary">#325C7F</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#F4717F</color>
+    <color name="azulFundo">#325C7F</color>
+    <color name="rosaSpudy">#F4717F</color>
+    <color name="azulClaro">#99AEC0</color>
+    <color name="cinzaLetras">#4D4D4D</color>
+    <color name="cinzaClaro">#E6E6E6</color>
+    <color name="colorIcones">#4A4A4A</color>
+    <color name="preto">#000000</color>
+</resources>

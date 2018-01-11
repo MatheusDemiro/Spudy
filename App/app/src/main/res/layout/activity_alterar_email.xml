@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulFundo"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:paddingVertical="50dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azulFundo"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context="com.example.spudydev.spudy.Activity.ConfirmRegistroActivity">
+
+            <EditText
+                android:id="@+id/edt_AlterarEmailPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Digite o novo email" />
+
+            <EditText
+                android:id="@+id/edt_AlterarEmailSenhaPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Digite sua senha " />
+
+            <Button
+                android:id="@+id/btn_AlterarEmailPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_pink"
+                android:text="Alterar Email"
+                android:textColor="@color/cinzaClaro" />
+        </LinearLayout>
+</LinearLayout>

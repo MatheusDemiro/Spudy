@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.spudydev.spudy.Activity.AlterarDadosCadastraisActivity"
+    tools:showIn="@layout/app_bar_alterar_dados_cadastrais"
+    android:orientation="vertical"
+    android:background="@color/azulFundo">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/ic_semfoto"
+        tools:ignore="VectorDrawableCompat" />
+
+    <EditText
+        android:id="@+id/edt_conta_nomeAlterar"
+        android:drawableLeft="@drawable/ic_person"
+        android:drawablePadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="35dp"
+        android:paddingLeft="15dp"
+        android:textColor="@color/preto"
+        android:maxLength="100"
+        android:background="@color/branco"/>
+
+    <EditText
+        android:id="@+id/edt_conta_dataNascimentoAlterar"
+        android:drawableLeft="@drawable/ic_calendario"
+        android:drawablePadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="15dp"
+        android:textColor="@color/preto"
+        android:background="@color/branco"/>
+
+    <EditText
+        android:id="@+id/edt_conta_instituicaoAlterar"
+        android:drawableLeft="@drawable/ic_institucao"
+        android:drawablePadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:paddingLeft="15dp"
+        android:textColor="@color/preto"
+        android:maxLength="100"
+        android:background="@color/branco"/>
+
+    <EditText
+        android:id="@+id/edt_content_alteraremail"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:paddingLeft="15dp"
+        android:textColor="@color/preto"
+        android:maxLength="100"
+        android:background="@color/branco"/>
+
+    <Button
+        android:id="@+id/btn_content_confirmar_alteracao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border_redondo_rosa"
+        android:textColor="@color/branco"
+        android:text="@string/sp_nav_confirmar_alteracao" />
+
+
+</LinearLayout>
