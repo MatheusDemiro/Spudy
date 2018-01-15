@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulFundo">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/azulFundo">
+
+        <TextView
+            android:id="@+id/aluno_titulo_nota"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/aluno_nota"
+            android:background="@drawable/border_branco"
+            android:text="TÍTULO DA NOTA"
+            android:textSize="22dp"
+            android:gravity="center|start"
+            android:paddingLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/aluno_nota"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_branco"
+            android:text="9,75"
+            android:gravity="center_vertical|center_horizontal"/>
+    </RelativeLayout>
+</ScrollView>
