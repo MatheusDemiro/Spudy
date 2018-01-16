@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azulFundo"
+    android:focusableInTouchMode="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ScrollView
@@ -24,25 +25,55 @@
             tools:context="com.example.spudydev.spudy.registro.gui.ConfirmRegistroActivity">
 
             <EditText
-                android:id="@+id/edt_AlterarSenhaAntiga"
+                android:id="@+id/edtAlterarSenhaAntiga"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Digite a senha antiga"
-                android:inputType="textPassword"/>
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_cadeado"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:inputType="date"
+                android:background="@drawable/border_white"
+                android:hint="@string/sp_hint_senha_antiga"
+                android:textColorHint="@color/textColorHint"
+                tools:ignore="RtlHardcoded"/>
 
             <EditText
-                android:id="@+id/edt_AlterarSenhaNova"
+                android:id="@+id/edtAlterarSenhaNova"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Digite a nova senha"
-                android:inputType="textPassword"/>
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_cadeado"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:inputType="date"
+                android:background="@drawable/border_white"
+                android:hint="@string/sp_hint_senha_nova"
+                android:textColorHint="@color/textColorHint"
+                tools:ignore="RtlHardcoded"/>
 
             <EditText
-                android:id="@+id/edt_AlterarSenhaNovaConfirma"
+                android:id="@+id/edtAlterarSenhaNovaConfirma"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Confirme a nova senha"
-                android:inputType="textPassword"/>
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_cadeado"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:inputType="date"
+                android:background="@drawable/border_white"
+                android:hint="@string/sp_hint_confirm_nova_senha"
+                android:textColorHint="@color/textColorHint"
+                tools:ignore="RtlHardcoded"/>
 
             <Button
                 android:id="@+id/btn_AlterarSenhaPerfil"

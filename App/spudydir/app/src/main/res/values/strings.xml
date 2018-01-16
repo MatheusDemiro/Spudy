@@ -17,6 +17,11 @@
     <string name="sp_hint_confirm_senha">Confirme sua senha</string>
     <string name="sp_hint_confirm_nova_senha">Confirmar nova senha</string>
     <string name="sp_hint_digitar_email">Digite seu email.</string>
+    <string name="sp_hint_nova_data_nascimento">Digite a nova data de nascimento</string>
+    <string name="sp_hint_nova_instituicao">Digite nova instituição</string>
+    <string name="sp_hint_novo_nome">Digite novo nome</string>
+    <string name="sp_hint_senha_antiga">Digite a senha antiga</string>
+    <string name="sp_hint_senha_nova">Digite nova senha</string>
 
 
     <string name="sp_title_adionar_turma"><b>ADICIONAR \n TURMA</b></string>

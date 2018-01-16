@@ -35,8 +35,8 @@ public class AlterarSenhaActivity extends AppCompatActivity {
 
         //Instatanciando os EditTexts
 
-        edt_alterarSenhaNova = findViewById(R.id.edt_AlterarSenhaNova);
-        edt_alterarSenhaNovaConfirma = findViewById(R.id.edt_AlterarSenhaNovaConfirma);
+        edt_alterarSenhaNova = findViewById(R.id.edtAlterarSenhaNova);
+        edt_alterarSenhaNovaConfirma = findViewById(R.id.edtAlterarSenhaNovaConfirma);
         btn_alterarSenhaPerfil = findViewById(R.id.btn_AlterarSenhaPerfil);
 
         verificaConexao = new VerificaConexao(this);

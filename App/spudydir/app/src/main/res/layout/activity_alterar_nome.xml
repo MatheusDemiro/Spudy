@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azulFundo"
+    android:focusableInTouchMode="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ScrollView
@@ -26,8 +27,19 @@
             <EditText
                 android:id="@+id/edt_AlterarNome"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Digite o novo nome" />
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_semfoto"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:inputType="date"
+                android:background="@drawable/border_white"
+                android:hint="@string/sp_hint_novo_nome"
+                android:textColorHint="@color/textColorHint"
+                tools:ignore="RtlHardcoded" />
 
             <Button
                 android:id="@+id/btn_AlterarNome"
