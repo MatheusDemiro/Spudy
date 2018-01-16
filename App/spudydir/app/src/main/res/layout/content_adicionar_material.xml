@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulFundo">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.spudydev.spudy.activity.DisciplinaActivity"
+        tools:showIn="@layout/activity_disciplina">
+
+        <TextView
+            android:id="@+id/material_nome_da_disciplina"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/rosaSpudy"
+            android:text="NOME DA DISCIPLINA"
+            android:textSize="20dp"
+            android:textColor="@color/branco"
+            android:gravity="center"
+            android:paddingLeft="15dp"/>
+
+        <EditText
+            android:id="@+id/titulo_do_material"
+            android:layout_marginTop="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/border_branco"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Título do Material"
+            android:paddingLeft="15dp"
+            android:layout_below="@id/material_nome_da_disciplina"/>
+
+        <EditText
+            android:id="@+id/link_do_material"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/border_branco"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Link"
+            android:paddingLeft="15dp"
+            android:layout_below="@id/titulo_do_material"/>
+
+        <Button
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/link_do_material"
+            android:background="@drawable/border_redondo_rosa"
+            android:text="ADICIONAR MATERIAL"
+            android:textColor="@color/branco"/>
+
+    </RelativeLayout>
+</ScrollView>
