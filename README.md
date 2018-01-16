@@ -1,4 +1,4 @@
 EQUIPE SPUDY:
-            Matheus Paulo
-            David Nibbering
-            Lucas Marsol
+        Matheus Paulo
+        David Nibbering
+        Lucas Marsol
