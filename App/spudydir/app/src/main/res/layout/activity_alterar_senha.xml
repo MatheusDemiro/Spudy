@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulFundo"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:paddingVertical="50dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azulFundo"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context="com.example.spudydev.spudy.registro.gui.ConfirmRegistroActivity"
+            tools:ignore="UnusedAttribute">
+
+            <EditText
+                android:id="@+id/edtAlterarSenhaAntiga"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border_white"
+                android:drawableLeft="@drawable/ic_cadeado"
+                android:drawablePadding="10dp"
+                android:hint="@string/sp_hint_senha_antiga"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                tools:ignore="RtlHardcoded"
+                android:inputType="textPassword"/>
+
+            <EditText
+                android:id="@+id/edtAlterarSenhaNova"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_white"
+                android:drawableLeft="@drawable/ic_cadeado"
+                android:drawablePadding="10dp"
+                android:hint="@string/sp_hint_senha_nova"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                tools:ignore="RtlHardcoded"
+                android:inputType="textPassword"/>
+
+            <EditText
+                android:id="@+id/edtAlterarSenhaNovaConfirma"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border_white"
+                android:drawableLeft="@drawable/ic_cadeado"
+                android:drawablePadding="10dp"
+                android:hint="@string/sp_hint_confirm_nova_senha"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                tools:ignore="RtlHardcoded"
+                android:inputType="textPassword"/>
+
+            <Button
+                android:id="@+id/btn_AlterarSenhaPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_pink"
+                android:text="@string/sp_btn_alterar_senha"
+                android:textColor="@color/cinzaClaro" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

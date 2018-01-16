@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/aluno_nome_da_turma"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="MODELAGEM E PROGRAMAÇÃO ORIENTADA A OBJETOS"
+        android:background="@color/azulFundo"
+        android:paddingLeft="15dp"
+        android:gravity="start|center"
+        android:textColor="@color/cinzaClaro"
+        android:textSize="18dp"
+        />
+    <TextView
+        android:id="@+id/aluno_nome_do_professor"
+        android:layout_width="match_parent"
+        android:layout_below="@id/aluno_nome_da_turma"
+        android:layout_height="25dp"
+        android:text="Nome do Professor: Gabriel Alves"
+        android:background="@color/rosaSpudy"
+        android:paddingRight="15dp"
+        android:gravity="right|center"
+        android:textColor="@color/cinzaClaro"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@id/aluno_nome_do_professor"
+        android:background="@color/cinzaClaro"
+        android:text="Código da turma: AAAAAA"
+        android:paddingRight="15dp"
+        android:gravity="right|center"
+        android:textColor="@color/preto"
+        />
+
+</RelativeLayout>

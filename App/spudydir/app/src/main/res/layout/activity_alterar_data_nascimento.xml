@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulFundo"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:paddingVertical="50dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azulFundo"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context="com.example.spudydev.spudy.registro.gui.ConfirmRegistroActivity">
+
+            <EditText
+                android:id="@+id/edt_AlterarDataNascimento"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:drawableLeft="@drawable/ic_calendario"
+                android:drawablePadding="10dp"
+                android:inputType="date"
+                android:background="@drawable/border_white"
+                android:textColorHint="@color/textColorHint"
+                android:hint="@string/sp_hint_nova_data_nascimento" />
+
+            <Button
+                android:id="@+id/btn_AlterarDataNascimento"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_pink"
+                android:text="alterar data de nascimento"
+                android:textColor="@color/cinzaClaro" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
