@@ -1,0 +1,84 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">spudy</string>
+
+    <string name="sp_registre"><u>Registre-se!</u></string>
+    <string name="sp_title_registre">REGISTRE-SE</string>
+    <string name="sp_turma_menu_lateral">Turmas</string>
+    <string name="sp_meu_perfil_menu_lateral">Meu perfil</string>
+    <string name="sp_disciplinas_menu_lateral">Disciplinas</string>
+    <string name="sp_sair_menu_lateral">Sair</string>
+    <string name="sp_confirm_reg">CONFIRMAR REGISTRO</string>
+    <string name="sp_pergunta_vazia">Escolha um tipo de conta</string>
+    <string name="sp_usuario_nao_registrado">Não é registrado?</string>
+    <string name="sp_btn_alterar_senha">Alterar Senha</string>
+    <string name="sp_btn_alterar_instituicao">Alterar Instituição</string>
+
+    <string name="sp_hint_resposta">Resposta</string>
+    <string name="sp_hint_nome">Nome completo</string>
+    <string name="sp_hint_nascimento">Data de Nascimento</string>
+    <string name="sp_hint_instituicao">Instituição</string>
+    <string name="sp_hint_email">Email</string>
+    <string name="sp_hint_nova_senha">Nova senha</string>
+    <string name="sp_hint_senha">Senha</string>
+    <string name="sp_hint_confirm_senha">Confirme sua senha</string>
+    <string name="sp_hint_confirm_nova_senha">Confirmar nova senha</string>
+    <string name="sp_hint_digitar_email">Digite seu email.</string>
+    <string name="sp_hint_nova_data_nascimento">Digite a nova data de nascimento</string>
+    <string name="sp_hint_nova_instituicao">Digite nova instituição</string>
+    <string name="sp_hint_novo_nome">Digite novo nome</string>
+    <string name="sp_hint_senha_antiga">Digite a senha antiga</string>
+    <string name="sp_hint_senha_nova">Digite nova senha</string>
+
+
+    <string name="sp_title_adionar_turma"><b>ADICIONAR \n TURMA</b></string>
+    <string name="sp_fra_digitar_codigo_turma">Digite o código da turma\ninformado pelo professor.</string>
+    <string name="sp_hint_codigo_da_turma">Código da Turma</string>
+    <string name="sp_adicionar_turma">ADICONAR TURMA</string>
+    <string name="sp_content_alterar">Alterar</string>
+
+    <string name="sp_recuperar_senha"><b>RECUPERAÇÃO \n DE SENHA</b></string>
+    <string name="sp_title_recuperacao_de_senha"><b>Recuperação de Senha</b></string>
+    <string name="sp_esqueceuSenha"><u>Não sei minha senha</u></string>
+
+    <string name="sp_conta_criada">CONTA CRIADA\nCOM SUCESSO!</string>
+    <string name="sp_alterar_data_nascimento_sucesso">Data de nascimento alterada com sucesso.</string>
+    <string name="sp_alterar_instituicao_sucesso">Instituição alterada com sucesso.</string>
+    <string name="sp_login_bem_sucedido">Login efetuado com sucesso.</string>
+    <string name="sp_usuario_cadastrado">Usuário cadastrado com sucesso.</string>
+    <string name="sp_email_enviado_sucesso">Email enviado com sucesso.</string>
+
+    <string name="sp_click_ok">OK</string>
+    <string name="sp_btn_entrar">ENTRAR</string>
+    <string name="sp_click_enviar">ENVIAR</string>
+    <string name="sp_nav_confirmar_alteracao">Confirmar</string>
+    <string name="sp_click_informacao">Clique no campo que deseja alterar.</string>
+
+    <string name="sp_campos_email_senha">Preencha os campos de email e senha!</string>
+    <string name="sp_senhas_iguais">Digite senhas iguais</string>
+    <string name="sp_conexao_falha">Sem conexão com a Internet.</string>
+    <string name="sp_usuario_senha_errados">Usuário ou senha inválido!</string>
+    <string name="sp_email_nao_cadastrado">Email não cadastrado</string>
+    <string name="sp_em_construcao" tools:ignore="TypographyEllipsis">Em construção...</string>
+
+    <string name="sp_excecao_campo_vazio">Preencha o campo vazio</string>
+    <string name="sp_excecao_nome_invalido">Nome inválido.</string>
+    <string name="sp_excecao_senha">Digite uma senha mais forte, contendo no mínimo 6 caracteres.</string>
+    <string name="sp_excecao_email">Email inválido.</string>
+    <string name="sp_excecao_email_cadastrado">Esse email já esta cadastrado no sistema</string>
+    <string name="sp_excecao_cadastro">Erro ao efetuar cadastro</string>
+    <string name="sp_excecao_banco">Erro ao cadastrar usuário no DataBase.</string>
+    <string name="sp_excecao_data_nascimento">Data de nascimento inválida.</string>
+    <string name="sp_excecao_tipo_conta">Selecione o tipo de conta</string>
+    <string name="sp_excecao_instituicao">Campo inválido.</string>
+
+    <string name="sp_title_activity_main">spudy</string>
+    <string name="sp_navigation_drawer_open">Open navigation drawer</string>
+    <string name="sp_navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="sp_action_configuracao">Configuracao</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="sp_nome_menu_lateral">Android Studio</string>
+    <string name="sp_email_menu_lateral">android.studio@android.com</string>
+
+</resources>
