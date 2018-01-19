@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_meu_perfil"
+            android:icon="@drawable/ic_semfoto"
+            android:title="@string/sp_meu_perfil_menu_lateral" />
+        <item
+            android:id="@+id/nav_turmas"
+            android:icon="@drawable/ic_turmas"
+            android:title="@string/sp_turma_menu_lateral"/>
+        <item
+            android:id="@+id/nav_sair"
+            android:icon="@drawable/ic_sair"
+            android:title="@string/sp_sair_menu_lateral" />
+
+    </group>
+</menu>
