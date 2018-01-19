@@ -1,0 +1,4 @@
+
+Ğ%squid:RedundantThrowsDeclarationCheck"™Remove the declaration of thrown exception 'com.example.spudydev.spudy.infraestrutura.utils.UsuarioException', as it cannot be thrown from method's body.(‰·ìİ8·²‚Ù,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8·²‚Ù,
+jsquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(ÃÆ•‚8·²‚Ù,
