@@ -15,7 +15,7 @@
 
 
 <p> 
-  <strong> Site: </strong> https://sites.google.com/view/spudy/p%C3%A1gina-inicial
+  <strong> Site: </strong> https://sites.google.com/view/spudy/
 </p>
 <p>
   <strong> Email: </strong> spudydev@gmail.com
