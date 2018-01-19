@@ -12,3 +12,11 @@
   <li> Matheus Paulo </li>
   <li> Pedro Venicio </li>
   </ul>
+
+
+<p> 
+  <strong> Site: </strong> https://sites.google.com/view/spudy/p%C3%A1gina-inicial
+</p>
+<p>
+  <strong> Email: </strong> spudydev@gmail.com
+  </p>
