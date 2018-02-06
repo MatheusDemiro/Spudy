@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinzaClaro"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/edtCodigoTurma"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/branco"
+            android:hint="@string/sp_hint_codigo_da_turma"
+            android:drawableLeft="@drawable/ic_adicionar"
+            android:drawableStart="@drawable/ic_adicionar"
+            android:drawableTint="@color/rosaSpudy"
+            android:drawablePadding="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:inputType="text"/>
+
+        <View
+            android:id="@+id/vwCodigoTurma"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/edtCodigoTurma"
+            android:background="@color/rosaSpudy"/>
+
+
+        <Button
+            android:id="@+id/btnAdicionarTurma"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/edtCodigoTurma"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_pink"
+            android:text="@string/sp_adicionar_turma"
+            android:textColor="@color/branco"/>
+
+        <TextView
+            android:id="@+id/aluno_digite_codigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/sp_fra_digitar_codigo_turma"
+            android:textColor="@color/preto"
+            android:gravity="center"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
