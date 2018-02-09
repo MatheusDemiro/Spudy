@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="spinner_tipo_conta">
-        <item>Selecione o tipo de conta</item>
-        <item>Aluno</item>
-        <item>Professor</item>
-    </string-array>
-</resources>

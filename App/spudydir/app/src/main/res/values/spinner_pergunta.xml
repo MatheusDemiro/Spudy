@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="spinner_pergunta_seguranca">
-        <item>Selecione a pergunta secreta</item>
-        <item>Qual o nome do seu primeiro animal de estimação?</item>
-        <item>Qual o nome do melhor amigo de infância?</item>
-        <item>Qual seu filme predileto?</item>
-    </string-array>
-</resources>
