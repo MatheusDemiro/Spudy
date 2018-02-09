@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinzaClaro"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cinzaClaro"
+            android:layout_marginTop="50dp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context="com.example.spudydev.spudy.registro.gui.ConfirmRegistroActivity">
+
+            <EditText
+                android:id="@+id/edt_AlterarNome"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/branco"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:hint="@string/sp_hint_novo_nome"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                tools:ignore="RtlHardcoded" />
+            <View
+                android:id="@+id/vwNomeAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/rosaSpudy" />
+
+            <Button
+                android:id="@+id/btn_AlterarNome"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_pink"
+                android:text="@string/sp_btn_alterar_nome"
+                android:textColor="@color/branco" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

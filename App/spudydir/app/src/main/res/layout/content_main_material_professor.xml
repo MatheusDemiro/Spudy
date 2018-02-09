@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.spudydev.spudy.entidades.material.gui.MainMaterialProfessorActivity"
+    tools:showIn="@layout/activity_main_material_professor">
+
+    <TextView
+        android:id="@+id/tvUsuariosAluno"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/rosaSpudy"
+        android:text="@string/sp_titulo_materiais"
+        android:textSize="20sp"
+        android:textColor="@color/branco"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnFlutuanteAdicionarMaterial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_add"
+        android:tint="@color/branco"
+        app:fabSize="normal"/>
+
+    <ListView
+        android:id="@+id/lvMateriais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="60dp"
+        android:paddingBottom="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </ListView>
+
+</RelativeLayout>

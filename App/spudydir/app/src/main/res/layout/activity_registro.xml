@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/branco"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtNomeRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/branco"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="20dp"
+            android:hint="@string/sp_hint_nome"
+            android:inputType="textPersonName"
+            android:maxLength="100"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/preto"
+            android:drawableTint="@color/rosaClaroSpudy"
+            tools:ignore="RtlHardcoded" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/cinzaClaro" />
+
+        <EditText
+            android:id="@+id/edtDataNascimentoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/branco"
+            android:drawableLeft="@drawable/ic_calendario"
+            android:drawablePadding="20dp"
+            android:hint="@string/sp_hint_nascimento"
+            android:inputType="date"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/preto"
+            android:drawableTint="@color/rosaClaroSpudy"
+            tools:ignore="RtlHardcoded" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/cinzaClaro" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/branco">
+
+            <Button
+                android:id="@+id/btnIconeSpinnerEndereco"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_spinner"
+                android:backgroundTint="@color/rosaSpudy"
+                android:layout_marginTop="12.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp" />
+
+            <Spinner
+                android:id="@+id/spnEstadoRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:entries="@array/spinner_estado"
+                android:layout_toRightOf="@id/btnIconeSpinnerEndereco"
+                android:layout_toEndOf="@id/btnIconeSpinnerEndereco"
+                android:paddingLeft="13dp"
+                android:paddingRight="30dp"
+                android:paddingEnd="30dp"
+                android:paddingStart="13dp"
+                android:textColor="@color/cinzaLetras" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/cinzaClaro" />
+
+        <EditText
+            android:id="@+id/edtCidadeRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/branco"
+            android:drawableLeft="@drawable/ic_endereco"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/rosaSpudy"
+            android:hint="@string/sp_hint_cidade"
+            android:inputType="text"
+            android:maxLength="100"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/preto"
+            tools:ignore="RtlHardcoded" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/cinzaClaro" />
+
+        <EditText
+            android:id="@+id/edtRuaRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/branco"
+            android:drawableLeft="@drawable/ic_endereco"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/rosaSpudy"
+            android:hint="@string/sp_hint_endereco"
+            android:inputType="text"
+            android:maxLength="100"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/preto"
+            tools:ignore="RtlHardcoded" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/cinzaClaro" />
+
+        <EditText
+            android:id="@+id/edtComplementoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/branco"
+            android:drawableLeft="@drawable/ic_endereco"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/rosaSpudy"
+            android:hint="@string/sp_hint_complemento"
+            android:inputType="text"
+            android:maxLength="100"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/preto"
+            tools:ignore="RtlHardcoded" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/cinzaClaro" />
+
+        <EditText
+            android:id="@+id/edtInstituicaoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/branco"
+            android:drawableLeft="@drawable/ic_institucao"
+            android:drawablePadding="20dp"
+            android:hint="@string/sp_hint_instituicao"
+            android:inputType="text"
+            android:maxLength="100"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/preto"
+            android:drawableTint="@color/rosaClaroSpudy"
+            tools:ignore="RtlHardcoded" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/cinzaClaro" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/branco">
+
+            <Button
+                android:id="@+id/btnIconeSpinnerTipoConta"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_spinner"
+                android:layout_marginTop="12.5dp"
+                android:backgroundTint="@color/rosaSpudy"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp" />
+
+            <Spinner
+                android:layout_toRightOf="@id/btnIconeSpinnerTipoConta"
+                android:id="@+id/spnTipoDeContaRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:entries="@array/spinner_tipo_conta"
+                android:paddingLeft="14dp"
+                android:paddingRight="30dp"
+                android:paddingEnd="30dp"
+                android:paddingStart="14dp"
+                android:textColor="@color/cinzaLetras" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/cinzaClaro" />
+
+        <EditText
+            android:id="@+id/edtEmailRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/branco"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="20dp"
+            android:hint="@string/sp_hint_email"
+            android:inputType="textWebEmailAddress"
+            android:drawableTint="@color/rosaClaroSpudy"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/preto"
+            tools:ignore="RtlHardcoded" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/cinzaClaro" />
+
+        <EditText
+            android:id="@+id/edtSenhaRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/branco"
+            android:drawableLeft="@drawable/ic_cadeado"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/rosaClaroSpudy"
+            android:hint="@string/sp_hint_senha"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/preto"
+            tools:ignore="RtlHardcoded" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/cinzaClaro" />
+
+        <EditText
+            android:id="@+id/edtConfirmaSenhaRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/branco"
+            android:drawableLeft="@drawable/ic_cadeado"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/rosaClaroSpudy"
+            android:hint="@string/sp_hint_confirm_senha"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/preto"
+            tools:ignore="RtlHardcoded" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/cinzaClaro"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnConfirmRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_pink"
+            android:text="@string/sp_confirm_reg"
+            android:textColor="@color/branco" />
+
+    </LinearLayout>
+</ScrollView>
