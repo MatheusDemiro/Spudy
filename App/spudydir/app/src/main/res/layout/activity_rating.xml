@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/branco"
+    tools:context="com.example.spudydev.spudy.entidades.avaliacao.gui.AvaliacaoActivity">
+
+    <TextView
+        android:id="@+id/tvAvalieTurma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/sp_txt_avalie_turma"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <RatingBar
+        android:id="@+id/rbAvaliacaoTurma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="173dp" />
+
+    <TextView
+        android:id="@+id/tvNotaAvaliacaoTurma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Nota: 0.0"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <Button
+        android:id="@+id/btnConfirmarAvaliacaoTurma"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sp_btn_confirmar_avaliacao"
+        android:textColor="@color/branco"
+        android:layout_gravity="center"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/border_redondo_rosa" />
+
+</LinearLayout>

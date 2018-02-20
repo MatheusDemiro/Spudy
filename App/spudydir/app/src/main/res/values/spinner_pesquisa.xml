@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_pesquisa">
+        <item>Turma</item>
+        <item>Professor</item>
+        <item>Turmas recomendadas</item>
+    </string-array>
+</resources>

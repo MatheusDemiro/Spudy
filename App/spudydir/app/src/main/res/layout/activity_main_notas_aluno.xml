@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.spudydev.spudy.entidades.nota.gui.MainNotasAlunoActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/blNotasAluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Notas"
+            app:titleTextColor="@color/branco">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ListView
+        android:id="@+id/lvNotasAluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:divider="@color/rosaSpudy"
+        android:dividerHeight="1dp"
+        android:layout_below="@id/blNotasAluno"/>
+
+</RelativeLayout>

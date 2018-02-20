@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.spudydev.spudy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".infraestrutura.gui.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".entidades.usuario.gui.RegistroActivity"
+            android:label="Registre-se" />
+        <activity android:name=".entidades.usuario.gui.ConfirmRegistroActivity" />
+        <activity
+            android:name=".entidades.pessoa.gui.AlterarNomeActivity"
+            android:label="Digite o seu titulo" />
+        <activity android:name=".entidades.pessoa.gui.AlterarDataNascimentoActivity" />
+        <activity android:name=".entidades.usuario.gui.AlterarInstituicaoActivity" />
+        <activity android:name=".entidades.usuario.gui.AlterarSenhaActivity" />
+        <activity android:name=".entidades.usuario.gui.AlterarEmailActivity" />
+        <activity android:name=".infraestrutura.gui.ResgatarSenhaActivity" />
+        <activity
+            android:name=".entidades.aluno.gui.MainAlunoActivity"
+            android:label="Spudy - O Jeito Inteligente"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".entidades.professor.gui.MainProfessorActivity"
+            android:label="Spudy - O Jeito Inteligente"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".perfil.gui.MeuPerfilAlunoActivity"
+            android:label="@string/sp_title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".perfil.gui.MeuPerfilProfessorActivity"
+            android:label="@string/sp_title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".entidades.endereco.gui.AlterarEnderecoActivity" />
+        <activity android:name=".entidades.turma.gui.CriarTurmaActivity" />
+        <activity
+            android:name=".entidades.turma.gui.AdicionarTurmaActivity"
+            android:label="Adicionar Turma" />
+        <activity android:name=".entidades.chat.gui.ChatActivity" />
+        <activity
+            android:name=".entidades.material.gui.MainMaterialAlunoActivity"
+            android:label="Materiais"/>
+        <activity
+            android:name=".entidades.material.gui.MainMaterialProfessorActivity"
+            android:label="Materiais"/>
+        <activity android:name=".entidades.material.gui.AdicionarMaterialActivity" />
+        <activity
+            android:name=".entidades.turma.gui.UsuariosTurmaAlunoActivity"
+            android:label="Usuários" />
+        <activity
+            android:name=".entidades.turma.gui.UsuariosTurmaProfessorActivity"
+            android:label="Usuários" />
+        <activity
+            android:name=".entidades.nota.gui.MainNotasProfessorActivity"
+            android:label="Notas"/>
+        <activity
+            android:name=".entidades.nota.gui.MainNotasAlunoActivity"
+            android:label="Notas"/>
+        <activity
+            android:name=".entidades.falta.gui.MainFaltaProfessorActivity"
+            android:label="Faltas"/>
+        <activity
+            android:name=".entidades.falta.gui.MainFaltaAlunoActivity"
+            android:label="Faltas"/>
+        <activity android:name=".entidades.turma.gui.TurmasProfessorActivity" />
+        <activity
+            android:name=".entidades.avaliacao.gui.AvaliacaoActivity"
+            android:label="Avaliação"/>
+    </application>
+
+</manifest>
