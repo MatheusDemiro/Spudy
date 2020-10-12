@@ -1,9 +1,9 @@
 # Spudy
-# Introdução
-  <p align="justify">  O Sistema de Comunicação Universitária (spudy) visa uma melhor interação entre docente e discente no quesito comunicação. O aplicativo conta com opções que possibilitam o docente gerir turmas desde o compartilhamento de material a controle de presença, já o discente tem acesso ao material das turmas em que está cadastrado e notificações das mesmas.</p>
+# Introduction
+  <p align="justify">  The University Communication System (spudy) aims at a better interaction between teacher and student in terms of communication. The application has options that enable the teacher to manage classes from the sharing of material to attendance control, since the student has access to the material of the classes in which he is registered and their notifications.</p>
   
   
- Equipe:
+ Group:
   <ul>
   <li> David Nibbering </li>
   <li> Guilherme Marinho </li>
@@ -18,5 +18,5 @@
   <strong> Site: </strong> https://sites.google.com/view/spudy/
 </p>
 <p>
-  <strong> Email: </strong> spudydev@gmail.com
+  <strong> E-mail: </strong> spudydev@gmail.com
   </p>
